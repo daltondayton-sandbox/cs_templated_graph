@@ -27,43 +27,7 @@ Graph::Graph(std::string filename) {
   }
 }
 
-int Graph::shortestCost(int start, int finish) {
-  int *dist = new int[numNodes];
-  list<int> remaining;
-  list<int> finished;
-  for (int i = 0; i < numNodes; i++) {
-    if (i == start) {
-      dist[i] = 0;
-    } else {
-      dist[i] = INT_MAX;
-    }
-    remaining.push_back(i);
-  }
-
-  while (!remaining.empty()) {
-    int minDist = INT_MAX;
-    int minIndex = -1;
-    for (list<int>::iterator listIt = remaining.begin();
-         listIt != remaining.end(); listIt++) {
-      if (dist[*listIt] < minDist) {
-        minDist = dist[*listIt];
-        minIndex = *listIt;
-      }
-    }
-    int cur = minIndex;
-    for (list<Pair>::iterator listIt = adjList[cur].begin();
-         listIt != adjList[cur].end(); listIt++) {
-      int next = (*listIt).node;
-      int nextWeight = (*listIt).weight;
-      if (dist[cur] + nextWeight < dist[next]) {
-        dist[next] = dist[cur] + nextWeight;
-      }
-    }
-    remaining.remove(cur);
-    finished.push_back(cur);
-  }
-
-  int shortestCost = dist[finish];
-  delete[] dist;
-  return shortestCost;
+int Graph::shortestCost(int startNode, int endNode) {
+  //
+  return 0;
 }

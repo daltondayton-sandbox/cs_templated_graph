@@ -15,8 +15,8 @@ struct Pair {
 
 class Graph {
 public:
-  Graph(std::string);
-  int shortestCost(int start, int finish);
+  Graph(std::string filename);
+  int shortestCost(int startNode, int endNode);
 
 private:
   std::list<Pair> *adjList;

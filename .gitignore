@@ -1,0 +1,54 @@
+# Object files
+*.o
+*.obj
+*.so
+*.ko
+*.a
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Dynamic Libraries
+*.dll
+*.dylib
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+main
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Build folders
+build/
+bin/
+obj/
+lib/
+
+# Dependency directories (e.g., vendor for libs)
+vendor/
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# Other files
+*.log
+*.swp
+.DS_Store
+
+# If using CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
